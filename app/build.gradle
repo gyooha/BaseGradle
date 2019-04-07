@@ -24,26 +24,11 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation rootProject.ext.kotlinStandardLibrary
-    implementation rootProject.ext.appcompat
-    implementation rootProject.ext.core
-    implementation rootProject.ext.constraint
-    implementation rootProject.ext.recyclerView
-    implementation rootProject.ext.coroutine
-    implementation rootProject.ext.rxKotlin
-    implementation rootProject.ext.rxAndroid
-    implementation rootProject.ext.retrofit
-    implementation rootProject.ext.okhttp
-    implementation rootProject.ext.jacksonKotlinModule
-    implementation rootProject.ext.jacksonCore
-    implementation rootProject.ext.jacksonDatabind
-    implementation rootProject.ext.jacksonAnnotation
-    kapt rootProject.ext.roomCompiler
-    implementation rootProject.ext.roomWithRx
-    implementation rootProject.ext.roomRuntime
 
-    testImplementation rootProject.ext.junit
-    testImplementation rootProject.ext.roomTest
-    androidTestImplementation rootProject.ext.runner
-    androidTestImplementation rootProject.ext.espresso
+    kotlin()
+    android()
+    network()
+    rx()
+
+    test()
 }
